@@ -1,0 +1,19 @@
+{
+  "name": "hockey-club",
+  "version": "1.0.0",
+  "description": "Stream One Final Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horan5034/Hockey-Club.git"
+  },
+  "author": "James Horan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/horan5034/Hockey-Club/issues"
+  },
+  "homepage": "https://github.com/horan5034/Hockey-Club#readme"
+}
