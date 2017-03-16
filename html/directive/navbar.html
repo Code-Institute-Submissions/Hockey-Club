@@ -1,0 +1,68 @@
+<div>
+	<nav id="navbar" class="navbar navbar-inverse bg-primary ">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				Wakefield Hockey Club
+			</a>
+			<!-- The data-toggle collapsed value controls the behaviour of the menu button
+			We give the button a target so we know which list we are wanting to collapse. 
+			this is done with a data-target attribute - YOU MUST REMEMBER to give the <ul> an id of this target
+			 -->
+			<button type="button" class="navbar-toggle collapsed" id="collapse-btn" data-target="#menu-list" data-toggle="collapse" ng-click="pushBody()">
+				<span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			</button>
+		</div>
+		<ul class="nav navbar-nav collapse navbar-collapse navbar-right" id="menu-list">
+			<li>
+				<a href="/">
+					Home
+				</a>
+			</li>
+			<li class="dropdown">
+		    	<a class="dropdown-toggle" data-toggle="dropdown">
+		    		Teams
+		    		<span class="caret"></span>
+		    	</a>
+		      	<ul class="dropdown-menu">
+		        	<li>
+		        		<a href="/teams/mens/first">
+		        			Mens First
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a href="/teams/mens/second">
+		        			Mens Second
+		        		</a>
+		        	</li>
+		        	<li>
+		        		<a href="/teams/ladies/first">
+		        			Ladies First
+		        		</a>
+		        	</li>     
+		        	<li>
+		        		<a href="/teams/ladies/second">
+		        			Ladies Second
+		        		</a>
+		        	</li>                        
+		      	</ul>
+		    </li>
+			<li>
+				<a href="/enquiry">
+					Enquiry
+				</a>
+			</li>
+			<li>
+				<a href="/media">
+					Media
+				</a>
+			</li>
+			<li>
+				<a href="/contact">
+					Contact Us
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

@@ -1,0 +1,25 @@
+body{
+
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;  
+    background-size: cover;
+
+    -webkit-background-border: border-cover;
+    -moz-background-border: border-cover;
+    -o-background-border: border-cover;
+    background-border: background-cover; 
+
+	background-color: #808080;
+	font-family: 'Pangolin', cursive;
+
+	display: flex;
+
+}
+
+/* Navbar CSS */
+nav{
+	font-size: 1.4em;
+}
+
+/* Home Page Content*/

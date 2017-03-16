@@ -1,0 +1,22 @@
+{
+  "name": "hockey-club",
+  "description": "Stream One Final Project",
+  "main": "index.js",
+  "authors": [
+    "James Horan"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/horan5034/Hockey-Club",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.3",
+    "angular-animate": "^1.6.3"
+  }
+}
