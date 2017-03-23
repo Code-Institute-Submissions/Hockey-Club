@@ -1,14 +1,14 @@
 <div class="jumbotron">
 	<div class="col-md-12">
 		<h1>
-			Mens First
+			{{ mens_first.name }}
 		</h1>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<img class="img-responsive" src="https://placehold.it/1050x450" alt="The First Team">
 		</div>
-		<div class="col-md-12" id="page-content">
+		<div class="col-md-12" id="team-page-content">
 			<div class="col-md-8">
 				<section>
 					<p>
@@ -18,16 +18,16 @@
 						The men's section has undergone some changes this season that we hope will add strength and depth to the club, encourage further player development and provide opportunities for all. Training has been restructured, and players are encouraged to attend and meet club members from other squads, support one another and enjoy their time at the club - whether playing or socialising. The thriving junior section has seen the standard and style of our younger players improve over recent years, with many now part of the Ireland Hockey single system for player development. We are proud to sustain our own pitch and fantastic adjacent clubhouse - a facility that is the envy of many visitors to the club! 
 					</p>
 					<p>
-						League: Western Division 1
+						League: {{ mens_first.league }}
 						<br>
-						Training: Monday 8.15pm - 10pm
+						Training: {{ men_first.training_1 }}
 						<br>
-						Thursday 8.15pm - 10pm
+						{{ mens_first.training_2 }}
 					</p>
 					<p> 
-						Team Coach: Duncan Letterman
+						Team Coach: {{ mens_first.coach }}
 						<br>
-						Captain: Terry Mckribban
+						Captain: {{ mens_first.captain }}
 					</p>
 				</section>
 			</div>

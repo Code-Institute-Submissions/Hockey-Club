@@ -30,9 +30,5 @@ angular.module("hockey-club").config(function($locationProvider, $routeProvider)
 	.when('/media', {
 		templateUrl: 'html/media.html',
 		controller : 'TeamController'
-	})
-	.when('/contact', {
-		templateUrl: 'html/contact.html',
-		controller : 'TeamController'
 	});
 });

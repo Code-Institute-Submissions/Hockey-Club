@@ -17,6 +17,21 @@ body{
 
 }
 
+/* Teams CSS */
+#team-page-content{
+	margin-top: 5%;
+}
+
+/* Enquiry CSS */
+.line-margin{
+    margin-top: 2%;
+}
+
+.input-width{
+    width: 160px;
+    height: 20px;
+}
+
 /* Navbar CSS */
 nav{
 	font-size: 1.4em;
