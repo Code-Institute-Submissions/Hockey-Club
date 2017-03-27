@@ -5,26 +5,16 @@
 		</h1>
 	</div>
 	<div class="row">
-		<form>
+		<form name="registrationForm" data-ng-submit="submitForm()" novalidate>
 			<div class="col-md-6">
 				<div class="row line-margin">
 					<div class="col-md-4">
 						<label for="first-name">
-							First Name:
+							Name:
 						</label>
 					</div>
 					<div class="col-md-8">
-						<input type="text" id="first-name" name="first-name">
-					</div>
-				</div>
-				<div class="row line-margin">
-					<div class="col-md-4">
-						<label for="last-name">
-							Last Name:
-						</label>
-					</div>
-					<div class="col-md-8">
-						<input type="text" id="last-name" name="last-name">
+						<input class="form-control" type="text" id="name" name="name" data-ng-model="user.name">
 					</div>
 				</div>
 				<div class="row line-margin">
@@ -34,7 +24,7 @@
 						</label>
 					</div>
 					<div class="col-md-8">
-						<input class="input-width" type="date" id="date-of-birth" name="date-of-birth">
+						<input class="form-control" type="date" id="date-of-birth" name="date-of-birth" >
 					</div>
 				</div>
 				<div class="row line-margin">
@@ -44,7 +34,7 @@
 						</label>
 					</div>
 					<div class="col-md-8">
-						<input type="text" id="email" name="email">
+						<input class="form-control" type="text" id="email" name="email" data-ng-model="user.email">
 					</div>
 				</div>
 				<div class="row line-margin">
@@ -54,7 +44,7 @@
 						</label>
 					</div>
 					<div class="col-md-8">
-						<select class="input-width" name="memberhsip" id="membership">
+						<select class="form-control" name="memberhsip" id="membership" data-ng-model="user.membership">
 							<option value="Senior">Senior</option>
 						    <option value="Junior">Junior</option>
 					    </select>
@@ -67,28 +57,28 @@
 						</label>
 					</div>
 					<div class="col-md-8">
-						<input type="text" id="gender" name="gender">
+						<input class="form-control" type="text" id="gender" name="gender" data-ng-model="user.gender">
 					</div>
 				</div>
-				<button class="line-margin" type="submit">
+				<button class="btn btn-primary line-margin" type="submit" data-ng-disabled="registrationForm.$invalid">
 					Enquire
 				</button>
 			</div>
-			<div class="col-md-6">
-			<p>
-					For bookings, events, somewhere to base your team or any other enquiry, please get in touch. 
-				</p>
-				<p>
-					Castlebar Hockey and Social Club
-				</p>
-				<p>
-					Castlebar
-					<br>
-					07533 676973
-					<br>
-					Clubhouse@slazengersportsclub.co.uk
-				</p>
-			</div>
 		</form>
+		<div class="col-md-6">
+			<p>
+				For bookings, events, somewhere to base your team or any other enquiry, please get in touch. 
+			</p>
+			<p>
+				Castlebar Hockey and Social Club
+			</p>
+			<p>
+				Castlebar
+				<br>
+				07533 676973
+				<br>
+				Clubhouse@slazengersportsclub.co.uk
+			</p>
+		</div>
 	</div>
 </div>

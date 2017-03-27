@@ -1,4 +1,4 @@
-angular.module("hockey-club", ["ngRoute", "NavDir", "HomeController", "TeamController"]);
+angular.module("hockey-club", ["ngRoute", "NavDir", "HomeController", "TeamController", "EnquiryController", "SweetAlerts"]);
 
 angular.module("hockey-club").config(function($locationProvider, $routeProvider){
 	$locationProvider.html5Mode(true);
@@ -25,7 +25,7 @@ angular.module("hockey-club").config(function($locationProvider, $routeProvider)
 	})
 	.when('/enquiry', {
 		templateUrl: 'html/enquiry.html',
-		controller : 'TeamController'
+		controller : 'EnquiryController'
 	})
 	.when('/media', {
 		templateUrl: 'html/media.html',
