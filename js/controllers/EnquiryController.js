@@ -13,11 +13,27 @@ app.controller("EnquiryController", function($scope, Alerts){
 
 	$scope.submitForm = function(){
 		console.log("Form Submitted");
+
 		if($scope.user.memberhip === "Senior"){
 			Alerts.sweet_success($scope.user.membership, $scope.pricelist.senior);
+			
 		} else {
 			Alerts.sweet_success($scope.user.membership, $scope.pricelist.junior);
 		}
+	};
 
+	$scope.calculateAge = function(dateOfBirth){
+		// Function that will roughly get the age of an enqury and 
+		// calculate if the player is old enough to play for the club
+
+		var todaysDate = new Date();
+
+		if(todaysDate.getYear() - dateOfBirth.getYear() < 8){
+			Alerts.sweet_error();
+		} else {
+			$scope.submitForm();
+		}
+
+		
 	};
 });

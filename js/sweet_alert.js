@@ -5,7 +5,7 @@ angular.module("SweetAlerts", [])
 				swal({
 				  title: type + " Enquiry!",
 				  text:  "Do you want to continue with the enquiry to become a " + type + " member of Castlebar Hockey Club? \n Annual membership will cost you £" + price + ".",
-				  type:  "success",
+				  type:  "warning",
 				  showCancelButton: true,
 				  confirmButtonColor: "#808080",
 				  confirmButtonText: "Send Enquiry!",
@@ -24,7 +24,7 @@ angular.module("SweetAlerts", [])
 						swal({
 							title: "Cancelled", 
 							text: "Your Enquiry has not been sent.",
-							type:  "success",
+							type:  "error",
 							confirmButtonColor: "#808080"
 						});
 					}
@@ -33,10 +33,11 @@ angular.module("SweetAlerts", [])
 
 			sweet_error: function(){
 				swal({
-				    title: "Error!",
-				    text: "Here's my error message!",
+				    title: "Underage Player.",
+				    text: "Sorry you have to be over 8 years of age to sign-up for our hockey club.",
 				    type: "error",
-				    confirmButtonText: "Bummer"
+				    confirmButtonText: "Sorry :(",
+				    confirmButtonColor: "#808080"
 				});
 			}
 		};
