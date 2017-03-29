@@ -23,20 +23,20 @@ app.controller("TeamController", [ "$scope", function($scope){
 
 	$scope.ladies_first = {
 		name 	 	: "Ladies First", 
-		training_1 	: "",
-		training_2 	: "", 
-		league		: "", 
-		coach		: "",
-		captain		: ""
+		training_1 	: "Monday 8.15pm - 10pm ",
+		training_2 	: "Thursday 8.15pm - 10pm", 
+		league		: "Western Division 1 ", 
+		coach		: "Duncan Letterman ",
+		captain		: "Ashley Rickards"
 	}
 
 	$scope.ladies_second = {
 		name 	 	: "Ladies Second", 
-		training_1 	: "",
-		training_2 	: "", 
-		league		: "", 
-		coach		: "",
-		captain		: ""
+		training_1 	: "Tuesday 8.15pm - 10pm",
+		training_2 	: "Friday 8.15pm - 10pm", 
+		league		: "Western Division 2", 
+		coach		: "Duncan Letterman",
+		captain		: "Veronica Mars"
 	}
 
 	$scope.juniors = {

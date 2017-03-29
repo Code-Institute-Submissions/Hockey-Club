@@ -1,5 +1,43 @@
 <div class="jumbotron">
-	<h1>
-		Ladies First
-	</h1>
+	<div class="col-md-12">	
+		<h1>
+			{{ ladies_first.name }}
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<img class="img-responsive" src="assets/images/ladies_first.jpg" alt="The First Team" width="100%" height="100%">
+		</div>
+		<div class="col-md-12" id="team-page-content">
+			<div class="col-md-8">
+				<section>
+					<p>
+						The mission of the Castlebar Hockey Club, is to provide age-appropriate training with high quality coaching for those players wishing to improve their skills in a competitive but fun environment.  Our Club Program welcomes players of all abilities to develop the foundational skill set necessary to play in our travel program if so desired.
+					</p>
+					<p>
+						Club Programs:  training sessions are limited to 1.5 – 2 hours in duration.  Each session combines individual skill work, small team/tactical play and scrimmage format games.  Our programs are designed to build self-confidence, develop life-skills, and instill a love of the game in all our athletes.  
+					</p>
+					<p>
+						The mission of the Clubs Indoor Program is to introduce athletes to the sport of Indoor Field Hockey.  We welcome players of all abilities (NEW and experienced) to develop the foundational skill-set necessary to play this exciting, fast-paced game.  We will provide age-appropriate training with high quality coaching for players wanting to learn and develop in a competitive and fun environment.  Our programs are designed to build self-confidence, develop life-skills, and instill a love of the game in all our players. Club teams will compete in local tournament.  
+					</p>
+				</section>
+			</div>
+			<div class="col-md-4">
+				<aside>
+					<p>
+						League: {{ ladies_first.league }}
+						<br>
+						Training: {{ ladies_first.training_1 }}
+						<br>
+						{{ ladies_first.training_2 }}
+					</p>
+					<p> 
+						Team Coach: {{ ladies_first.coach }}
+						<br>
+						Captain: {{ ladies_first.captain }}
+					</p>
+				</aside>
+			</div>
+		</div>
+	</div>
 </div>

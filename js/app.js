@@ -23,6 +23,10 @@ angular.module("hockey-club").config(function($locationProvider, $routeProvider)
 		templateUrl: 'html/teams/ladies-second.html',
 		controller : 'TeamController'
 	})
+	.when('/teams/juniors', {
+		templateUrl: 'html/teams/juniors.html',
+		controller : 'TeamController'
+	})
 	.when('/enquiry', {
 		templateUrl: 'html/enquiry.html',
 		controller : 'EnquiryController'
