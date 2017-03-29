@@ -16,9 +16,10 @@ app.controller("EnquiryController", function($scope, Alerts){
 
 		if($scope.user.memberhip === "Senior"){
 			Alerts.sweet_success($scope.user.membership, $scope.pricelist.senior);
-			
+			$scope.resetForm();
 		} else {
 			Alerts.sweet_success($scope.user.membership, $scope.pricelist.junior);
+			$scope.resetForm();
 		}
 	};
 
@@ -33,7 +34,10 @@ app.controller("EnquiryController", function($scope, Alerts){
 		} else {
 			$scope.submitForm();
 		}
+	};
 
-		
+	$scope.resetForm = function(){
+		$scope.registrationUser = {};
+		$scope.registrationForm.$pristine = true;
 	};
 });
