@@ -26,7 +26,7 @@ angular.module("SweetAlerts", [])
 							text: "Your Enquiry has not been sent.",
 							type:  "error",
 							confirmButtonColor: "#808080"
-						});
+						})
 					}
 				});
 			},
@@ -40,6 +40,8 @@ angular.module("SweetAlerts", [])
 				    confirmButtonColor: "#808080"
 				});
 			}
+
+			
 		};
 
 		return Alerts;
