@@ -9,7 +9,8 @@ app.controller("TeamController", [ "$scope", function($scope){
 		training_2 	: "Thursday 8.15pm - 10pm", 
 		league		: "Western Division 1 ", 
 		coach		: "Duncan Letterman ",
-		captain		: "Terry Mckribban"
+		captain		: "Terry Mckribban",
+		likes 		: 0
 	};
 
 	$scope.mens_second = {
@@ -18,7 +19,8 @@ app.controller("TeamController", [ "$scope", function($scope){
 		training_2 	: "Friday 8.15pm - 10pm", 
 		league		: "Western Division 2", 
 		coach		: "Duncan Letterman",
-		captain		: "Tyler Durkan"
+		captain		: "Tyler Durkan",
+		likes 		: 0
 	}
 
 	$scope.ladies_first = {
@@ -27,7 +29,8 @@ app.controller("TeamController", [ "$scope", function($scope){
 		training_2 	: "Thursday 8.15pm - 10pm", 
 		league		: "Western Division 1 ", 
 		coach		: "Duncan Letterman ",
-		captain		: "Ashley Rickards"
+		captain		: "Ashley Rickards",
+		likes 		: 0
 	}
 
 	$scope.ladies_second = {
@@ -36,14 +39,15 @@ app.controller("TeamController", [ "$scope", function($scope){
 		training_2 	: "Friday 8.15pm - 10pm", 
 		league		: "Western Division 2", 
 		coach		: "Duncan Letterman",
-		captain		: "Veronica Mars"
+		captain		: "Veronica Mars",
+		likes 		: 0
 	}
 
 	$scope.juniors = {
 		name 	 	: "Juniors", 
 		training	: "Wednesday 5pm - 7pm",
 		league		: "Junior", 
-		coach		: "Duncan Letterman"
+		coach		: "Duncan Letterman",
+		likes 		: 0
 	}
-	
 }])

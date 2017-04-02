@@ -1,13 +1,26 @@
 <div class="jumbotron">
-	<div class="col-md-12">
+	<div class="row">
 		<h1>
-			{{ mens_second.name }}
+			{{ mens_second.name }} 
 		</h1>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			<img class="img-responsive" src="assets/images/mens_second.jpg" alt="The Second Team" width="100%">
-		</div>
+		<div class="panel-group" id=acordian>
+			<div class="panel panel-default">
+			   	<div class="panel-heading">
+			   		<h3 class="panel-title">
+			      		<a data-toggle="collapse" data-parent="#acordian" href="#collapse-image">
+			      			View Team Photo
+			    	  	</a>
+			    	</h3>
+			   	</div>
+			   	<div id="collapse-image" class="panel-collapse collapse">
+					<div class="col-md-12">
+						<img class="img-responsive" src="assets/images/mens-second/mens_second.jpg" alt="The Second Team" width="100%">
+					</div>
+				</div>
+			</div>
+		</div>		
 		<div class="col-md-12" id="team-page-content">
 			<div class="col-md-8 col-sm-7">
 				<section>

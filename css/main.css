@@ -25,6 +25,11 @@ body{
     margin-top: 2%;
 }
 
+/* Carousel CSS */
+.center-image{
+    margin-left: 25%;
+}
+
 /* Navbar CSS */
 nav{
 	font-size: 1.4em;

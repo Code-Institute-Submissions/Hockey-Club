@@ -1,4 +1,6 @@
-angular.module("hockey-club", ["ngRoute", "NavDir", "HomeController", "TeamController", "EnquiryController", "SweetAlerts"]);
+angular.module("hockey-club", ["ngRoute", "NavDir", "CarouselDir", "HomeController", 
+							   "TeamController", "EnquiryController", "SweetAlerts",
+							   "MediaController", "angular-storage", "UserService"]);
 
 angular.module("hockey-club").config(function($locationProvider, $routeProvider){
 	$locationProvider.html5Mode(true);
@@ -31,8 +33,8 @@ angular.module("hockey-club").config(function($locationProvider, $routeProvider)
 		templateUrl: 'html/enquiry.html',
 		controller : 'EnquiryController'
 	})
-	.when('/media', {
-		templateUrl: 'html/media.html',
-		controller : 'TeamController'
+	.when('/media/images', {
+		templateUrl: 'html/media/image-carousel.html',
+		controller : 'MediaController'
 	});
 });

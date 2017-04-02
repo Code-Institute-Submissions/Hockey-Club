@@ -21,7 +21,7 @@
 				</a>
 			</li>
 			<li class="dropdown">
-		    	<a class="dropdown-toggle" data-toggle="dropdown">
+		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 		    		Teams
 		    		<span class="caret"></span>
 		    	</a>
@@ -54,15 +54,74 @@
 		      	</ul>
 		    </li>
 			<li>
+		    	<a href="/media/images">
+		    		Media
+		    	</a>
+		    </li>
+		    <li>
 				<a href="/enquiry">
-					Enquiry
+					Enquires
 				</a>
 			</li>
 			<li>
-				<a href="/media">
-					Media
+				<a href="#" data-toggle="modal" data-target="#login-modal">
+					Login
 				</a>
 			</li>
 		</ul>
 	</nav>
 </div>
+
+<!-- Model -->
+<div class="container">
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header background">
+                    <h4 class="modal-title">
+                        Members Login
+                    </h4>
+                </div>
+                <div class="modal-body">
+                	<form name="loginForm" novalidate>
+	                	<div class="form-group row line-margin">
+							<div class="form-group col-md-4">
+								<label for="user.username">
+									Username/Email:
+								</label>
+							</div>
+							<div class="form-group col-md-8">
+								<input class="form-control" type="text" name="username" data-ng-model="user.username" required>
+								<p data-ng-show="loginForm.username.$pristine" class="help-block">
+			                        Your username/email is required
+			                    </p>
+							</div>
+						</div>
+						<div class="form-group row line-margin">
+							<div class="form-group col-md-4">
+								<label for="user.password">
+									Password:
+								</label>
+							</div>
+							<div class="form-group col-md-8">
+								<input class="form-control" type="password" name="password" data-ng-model="user.password" required>
+								<p data-ng-show="loginForm.password.$pristine" class="help-block">
+			                        Your password is required
+			                    </p>
+							</div>
+						</div>
+					</form>
+                </div>        
+                <div class="modal-footer background">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="submit" ng-click="userLogin()" class="btn btn-primary" data-ng-disabled="loginForm.$invalid" data-dismiss="modal">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
