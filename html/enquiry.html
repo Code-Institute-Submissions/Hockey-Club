@@ -27,7 +27,14 @@
 						</label>
 					</div>
 					<div class="form-group col-md-8">
-						<input class="form-control" type="date" name="dateOfBirth" data-ng-model="user.dateOfBirth" required>
+						<md-content ng-controller="EnquiryController" layout-padding ng-cloak>
+						  	<div layout-gt-xs="row">
+						    	<div flex-gt-xs>
+						      		<md-datepicker ng-model="EnquiryController.todaysDate" md-placeholder="Enter date"></md-datepicker>
+						    	</div>
+						    </div>
+						</md-content>
+
 						<!-- <p data-ng-show="registrationForm.dateOfBirth.$pristine" class="help-block">
 							Your date of birth helps us determine what team to put you on.
 						</p> -->

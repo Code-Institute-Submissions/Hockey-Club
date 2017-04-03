@@ -3,6 +3,8 @@ var app = angular.module("EnquiryController", []);
 app.controller("EnquiryController", function($scope, Alerts){
 
 	console.log("EnquiryController");
+	$scope.myDate = new Date();
+  	$scope.isOpen = false;
 	
 	$scope.pricelist = {
 		senior: 120, 

@@ -55,16 +55,15 @@ angular.module("SweetAlerts", [])
 				});
 			},
 
-			login_error: function(){
+			login_error: function(error){
 				swal({
 				    title 	: "Something Went Wrong!",
-				    text 	: "Very sorry, but there was an error logging you in.",
+				    text 	: "There was an issue logging you in. \nPlease contact site administrator at horan5034@gmail.com with the error code: " + error.message,
 				    type	: "error",
 				    confirmButtonText : "Okay",
 				    confirmButtonColor: "#808080"
 				});
-			}
-			
+			}			
 		};
 
 		return Alerts;

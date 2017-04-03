@@ -1,14 +1,15 @@
 var app = angular.module("HomeController", []);
 
 app.controller("HomeController", function($scope, $location, store, UserServices, Alerts){
-	console.log("HomeController");
 
-	$scope.likes 	 = 0;
-	$scope.loginUser = {};
+	$scope.likes 	 	  = store.get('likes');
+	$scope.loginUser 	  = {};
+	$scope.showUsername   = "Login";
 	var URL = "https://morning-castle-91468.herokuapp.com/";
 
 	$scope.plusOne = function(){
 		$scope.likes += 1;
+		store.set("likes", $scope.likes);
 	};
 
     $scope.userLogin = function() {
@@ -17,29 +18,27 @@ app.controller("HomeController", function($scope, $location, store, UserServices
         	$scope.loginUser.username = $scope.user.username;
 	        $scope.loginUser.password = $scope.user.password;
 	        
-			UserServices.callAPI(URL + "/accounts/register/", $scope.loginUser).then(function(results) { 
-				$scope.data = results.data;  
+			UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
+				// $scope.data 		= results.data; 
+				$scope.showUsername = $scope.user.username;
 
 	            Alerts.login_success();
-	            store.set('username',  $scope.loginUser.username);
-            	store.set('password',  $scope.loginUser.password);
-	            // $scope.storeLogin();
-	            console.log("Modal Close: " + $scope.$modalInstance);
+	            $scope.storeDetails($scope.loginUser.username, $scope.loginUser.password);
         	})
 			.catch(function(err) {
-                Alerts.login_error();
+                Alerts.login_error(err);
             });
     	}
 	};
 
-	$scope.storeLogin = function() {
+	$scope.storeDetails = function(username, password) {
         UserServices.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results) {
 
             $scope.loginUser.token = results.data.token;
-            console.log("Username: " + results.data.username);
+            console.log("Username: " + username + "\nPassword: " + password + "\nLikes: " + store.get("likes"));
 
-            store.set('username',  $scope.loginUser.username);
-            store.set('password',  $scope.loginUser.password);
+            store.set('username',  username);
+            store.set('password',  password);
             store.set('authToken', $scope.loginUser.token);
 
         }).catch(function(err) {

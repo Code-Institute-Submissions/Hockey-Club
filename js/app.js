@@ -1,6 +1,7 @@
 angular.module("hockey-club", ["ngRoute", "NavDir", "CarouselDir", "HomeController", 
 							   "TeamController", "EnquiryController", "SweetAlerts",
-							   "MediaController", "angular-storage", "UserService"]);
+							   "MediaController", "angular-storage", "UserService",
+							   "ngMaterial", "ngAria"]);
 
 angular.module("hockey-club").config(function($locationProvider, $routeProvider){
 	$locationProvider.html5Mode(true);

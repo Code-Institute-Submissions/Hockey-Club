@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/horan5034/Hockey-Club/issues"
   },
-  "homepage": "https://github.com/horan5034/Hockey-Club#readme"
+  "homepage": "https://github.com/horan5034/Hockey-Club#readme",
+  "dependencies": {
+    "angular-material": "^1.1.3"
+  }
 }
