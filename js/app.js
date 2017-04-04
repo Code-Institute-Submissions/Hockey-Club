@@ -3,7 +3,7 @@ angular.module("hockey-club", ["ngRoute", "NavDir", "CarouselDir", "HomeControll
 							   "MediaController", "angular-storage", "UserService",
 							   "ngMaterial", "ngAria"]);
 
-angular.module("hockey-club").config(function($locationProvider, $routeProvider){
+angular.module("hockey-club").config( function($locationProvider, $routeProvider){
 	$locationProvider.html5Mode(true);
 
 	$routeProvider.when('/', {

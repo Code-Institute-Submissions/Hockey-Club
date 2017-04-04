@@ -20,7 +20,7 @@
 					<br>
 					As a club we aim to provide access to the game of hockey, at the appropriate level, to as many people as possible within the Castlebar area, regardless of gender, age or background. We aim to provide relevant coaching at all levels, especially at junior and youth level. This allows players to develop to their best potential. 
 					<br>
-					We will establish effective links with the District Councils, Schools, Active Sports, County Associations and other key organisations to improve skills, increase participations and progress young players to higher levels of achievement. We aim to develop all aspects of the sport, not just playing, but also in umpiring, coaching and on the social side, so that members are made to feel included in and part of a worthwhile club. We have 4 men’s teams playing in the Hampshire league structure and also have 2 men’s Vets teams. We have 5 ladies teams playing in the West Clubs Women’s Hockey league.
+					We will establish effective links with the District Councils, Schools, Active Sports, County Associations and other key organisations to improve skills, increase participations and progress young players to higher levels of achievement. We aim to develop all aspects of the sport, not just playing, but also in umpiring, coaching and on the social side, so that members are made to feel included in and part of a worthwhile club. We have 2 mens senior teams playing in the Western Division league structure. We have 2 ladies senior teams playing in the West Clubs Women’s Hockey league and a Junior squad.
 					<br>
 					<br>
 					As a Club we will put in place the necessary administrative structure to encourage all members to become involved in as many ways as possible and to offer access to relevant courses to enable the Club to improve its skills base.
@@ -50,6 +50,17 @@
 			        	<span class="glyphicon glyphicon-plus"></span> likes {{ likes }}
 			        </button>
 				</p>
+				<div class="line-margin" id="subscribeForm">
+					<form name="subForm" data-ng-submit="subscribe(newsletter)" novalidate>
+						<label for="newsletter">
+							Subscribe to our newsletter
+						</label>
+						<input class="form-control" type="text" data-ng-model="newsletter">
+						<button type="sumbit" class="btn btn-info btn-sm line-margin" data-ng-model="newsletter">
+							Subscribe
+						</button>	
+					</form>
+				</div>
 			</aside>
 		</div>
 	</div>

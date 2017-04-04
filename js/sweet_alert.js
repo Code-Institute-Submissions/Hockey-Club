@@ -1,7 +1,7 @@
 angular.module("SweetAlerts", [])
 	.factory("Alerts", function(){
 		Alerts = {
-			enquiry_success: function(type, price){
+			enquirySuccess: function(type, price){
 				swal({
 				  title : type + " Enquiry!",
 				  text 	:  "Do you want to continue with the enquiry to become a " + type + " member of Castlebar Hockey Club? \n Annual membership will cost you £" + price + ".",
@@ -34,7 +34,7 @@ angular.module("SweetAlerts", [])
 				});
 			},
 
-			enquiry_error: function(){
+			enquiryError: function(){
 				swal({
 				    title 	: "Underage Player.",
 				    text 	: "Sorry you have to be over 8 years of age to sign-up for our hockey club.",
@@ -44,7 +44,7 @@ angular.module("SweetAlerts", [])
 				});
 			},
 
-			login_success: function(){
+			loginSuccess: function(){
 				swal({
 				    title	: "Logged In.",
 				    text 	: "You have successfully logged into Castlebar Hockey Clubs membership portal.",
@@ -55,7 +55,7 @@ angular.module("SweetAlerts", [])
 				});
 			},
 
-			login_error: function(error){
+			loginError: function(error){
 				swal({
 				    title 	: "Something Went Wrong!",
 				    text 	: "There was an issue logging you in. \nPlease contact site administrator at horan5034@gmail.com with the error code: " + error.message,
@@ -63,6 +63,26 @@ angular.module("SweetAlerts", [])
 				    confirmButtonText : "Okay",
 				    confirmButtonColor: "#808080"
 				});
+			},		
+
+			subscriptionSuccess: function(newsletter){
+				if(newsletter !== undefined){
+					swal({
+				    title 	: "Thank You For Subscribing",
+				    text 	: "We are delighted to have you on board for our monthly subscription service.",
+				    type	: "success",
+				    confirmButtonText : "Okay",
+				    confirmButtonColor: "#808080"
+				});
+				} else {
+					swal({
+				    title 	: "You Forgot To Add Your Email Address",
+				    text 	: "We could do with your email address if you want us to email you.",
+				    type	: "warning",
+				    confirmButtonText : "Okay",
+				    confirmButtonColor: "#808080"
+				});
+				}
 			}			
 		};
 

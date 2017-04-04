@@ -3,8 +3,8 @@ var app = angular.module("EnquiryController", []);
 app.controller("EnquiryController", function($scope, Alerts){
 
 	console.log("EnquiryController");
-	$scope.myDate = new Date();
-  	$scope.isOpen = false;
+	$scope.todaysDate = new Date();
+  	$scope.isOpen 	  = false;
 	
 	$scope.pricelist = {
 		senior: 120, 
@@ -19,8 +19,8 @@ app.controller("EnquiryController", function($scope, Alerts){
 		} else {
 			// Ternary operator. Determines whether or not to show senior or junior sweet alert success
 			$scope.user.membership === "Senior" ? 
-				Alerts.enquiry_success($scope.user.membership, $scope.pricelist.senior) 
-				: Alerts.enquiry_success($scope.user.membership, $scope.pricelist.junior);	
+				Alerts.enquirySuccess($scope.user.membership, $scope.pricelist.senior) 
+				: Alerts.enquirySuccess($scope.user.membership, $scope.pricelist.junior);	
 				
 			$scope.resetForm(isPristine);
 		}

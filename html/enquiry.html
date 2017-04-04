@@ -1,5 +1,5 @@
 <div class="jumbotron">
-	<div class="">
+	<div>
 		<h1>
 			Enquiry
 		</h1>
@@ -21,24 +21,18 @@
 					</div>
 				</div>
 				<div class="form-group row line-margin">
-					<div class="form-group col-md-4">
+					<div class="col-md-4">
 						<label for="dateOfBirth">
 							Date of Birth:
 						</label>
 					</div>
-					<div class="form-group col-md-8">
-						<md-content ng-controller="EnquiryController" layout-padding ng-cloak>
-						  	<div layout-gt-xs="row">
-						    	<div flex-gt-xs>
-						      		<md-datepicker ng-model="EnquiryController.todaysDate" md-placeholder="Enter date"></md-datepicker>
-						    	</div>
-						    </div>
+					<div class="col-md-8" ng-controller="EnquiryController" ng-cloak>
+						<md-content >
+				      		<md-datepicker ng-model="user.dateOfBirth" ng-current-view="year" md-placeholder="Enter Date" md-current-view="year" md-open-on-focus>
+				      			
+				      		</md-datepicker>
 						</md-content>
-
-						<!-- <p data-ng-show="registrationForm.dateOfBirth.$pristine" class="help-block">
-							Your date of birth helps us determine what team to put you on.
-						</p> -->
-					</div>
+					</div>				
 				</div>
 				<div class="form-group row line-margin">
 					<div class="col-md-4">
@@ -104,19 +98,24 @@
 				</button>
 			</div>
 		</form>
-		<div class="col-md-6">
+		<div class="col-md-6 line-margin">
 			<p>
 				For bookings, events, somewhere to base your team or any other enquiry, please get in touch. 
 			</p>
 			<p>
 				Castlebar Hockey and Social Club
+				<br>
+				Lannagh Road, 
+				<br>
+				Castlebar, 
+				<br>
+				County Mayo
 			</p>
 			<p>
-				Castlebar
 				<br>
-				07533 676973
+				01230 456789
 				<br>
-				Clubhouse@castlebarhockeyclub.co.uk
+				clubhouse@donotemail.com
 			</p>
 		</div>
 	</div>

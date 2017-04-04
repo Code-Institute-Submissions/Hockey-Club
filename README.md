@@ -1,10 +1,9 @@
-# Stream One Final Project
-# Castlebar Hockey Club
+# Stream One Final Project - Castlebar Hockey Club
 
 ## Overview
 
 ### The aim of this website
-Displays club information and images to websites visitors. Gives visitors the aility to enquire for membership or login if they are already a member. 
+Displays club information and images to websites visitors. Gives visitors the aility to enquire for membership or login if they are already a member. Using HTMl5, CSS and Bootstrap, the website is aimed to be used on multiple browsers and devices.
  
 ### How does it work
 This app uses JSON Web Tokens to authenticate users and keep them logged in. All the data is consumed from an API hosted on Heroku using AngularJS. The site is styled with Bootstrap.
@@ -17,7 +16,7 @@ This app uses JSON Web Tokens to authenticate users and keep them logged in. All
 - Images Gallery Carousel.
 - 5 Team Pages. 
 - Likes Counter (Likes stored in local storage)
-
+- Angular Material - Used for datepicker on IE and Mozilla as *date types* are unsupported on these browsers.
  
 ### Features I Would Like To Add.
 - User Based Features
@@ -38,6 +37,8 @@ This app uses JSON Web Tokens to authenticate users and keep them logged in. All
     - Used **jQuery** modals for login.
 - [Sweet Alerts](http://t4t5.github.io/sweetalert/)
 	- **Sweet Alerts** are in use on the Enquiry Form and the Login Modal. 
+- [Angular Material] (https://material.angularjs.org/latest/)
+	- **Angular Materials** were used in for date types on browsers that don't support date types.
 
 ## Contributing
  

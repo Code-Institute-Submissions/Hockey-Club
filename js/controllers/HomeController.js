@@ -12,6 +12,11 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 		store.set("likes", $scope.likes);
 	};
 
+	$scope.subscribe = function(newsletter){
+		console.log($scope.newsletter);
+		Alerts.subscriptionSuccess($scope.newsletter);
+	};
+
     $scope.userLogin = function() {
         if ($scope.loginForm.$valid) {
 
@@ -22,11 +27,11 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 				// $scope.data 		= results.data; 
 				$scope.showUsername = $scope.user.username;
 
-	            Alerts.login_success();
+	            Alerts.loginSuccess();
 	            $scope.storeDetails($scope.loginUser.username, $scope.loginUser.password);
         	})
 			.catch(function(err) {
-                Alerts.login_error(err);
+                Alerts.loginError(err);
             });
     	}
 	};
@@ -35,8 +40,7 @@ app.controller("HomeController", function($scope, $location, store, UserServices
         UserServices.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results) {
 
             $scope.loginUser.token = results.data.token;
-            console.log("Username: " + username + "\nPassword: " + password + "\nLikes: " + store.get("likes"));
-
+            
             store.set('username',  username);
             store.set('password',  password);
             store.set('authToken', $scope.loginUser.token);
