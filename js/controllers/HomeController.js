@@ -23,7 +23,7 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 	        $scope.loginUser.password = $scope.user.password;
 	        
 			UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
-				// $scope.data 		= results.data; 
+				
 				$scope.showUsername = $scope.user.username;
 
 	            Alerts.loginSuccess();
@@ -36,6 +36,8 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 	};
 
 	$scope.storeDetails = function(username, password) {
+		$scope.data.username = username;
+		$scope.data.password = password;
         UserServices.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results) {
 
             $scope.loginUser.token = results.data.token;
