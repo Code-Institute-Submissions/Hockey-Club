@@ -13,6 +13,7 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 	};
 
 	$scope.subscribe = function(newsletter){
+		console.log($scope.newsletter);
 		Alerts.subscriptionSuccess($scope.newsletter);
 	};
 
@@ -21,15 +22,20 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 
         	$scope.loginUser.username = $scope.user.username;
 	        $scope.loginUser.password = $scope.user.password;
+	        console.log("Login User: " + $scope.loginUser.username + 
+	        			"\nLogin Password: "+ $scope.loginUser.password +
+	        			"\nUser Username: " + $scope.user.username + 
+	        			"\nUser Password: " + $scope.user.password);
 	        
 			UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
-			
+				// $scope.data 		= results.data; 
+				
 	            $scope.storeDetails($scope.loginUser.username, $scope.loginUser.password);
 	            Alerts.loginSuccess();
-				$scope.showUsername = $scope.user.username;
+	            $scope.showUsername = $scope.user.username;
         	})
 			.catch(function(err) {
-                Alerts.loginError(err.data);
+                Alerts.loginError(err);
             });
     	}
 	};
@@ -41,12 +47,12 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 
             $scope.loginUser.token = results.data.token;
             
-            store.set('username',  $scope.loginUser.username);
-            store.set('password',  $scope.loginUser.password);
+            store.set('username',  username);
+            store.set('password',  password);
             store.set('authToken', $scope.loginUser.token);
 
         }).catch(function(err) {
-            Alerts.loginError(err.data);
+           	Alerts.loginError(err.data);
         });
     };
 });
