@@ -13,7 +13,6 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 	};
 
 	$scope.subscribe = function(newsletter){
-		console.log($scope.newsletter);
 		Alerts.subscriptionSuccess($scope.newsletter);
 	};
 

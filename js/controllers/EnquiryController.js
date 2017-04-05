@@ -12,7 +12,6 @@ app.controller("EnquiryController", function($scope, Alerts){
 
 	$scope.submitForm = function(dateOfBirth){
 		var isPristine = $scope.registrationForm.name.$pristine;
-		console.log("Todays Date: " + $scope.todaysDate + "\nDate Of Birth: " + dateOfBirth);
 
 		if($scope.todaysDate.getYear() - dateOfBirth.getYear() < 8){
 			Alerts.enquiryError();
