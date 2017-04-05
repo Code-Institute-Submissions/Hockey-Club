@@ -29,24 +29,24 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 				$scope.showUsername = $scope.user.username;
         	})
 			.catch(function(err) {
-                Alerts.loginError(err);
+                Alerts.loginError(err.data);
             });
     	}
 	};
 
 	$scope.storeDetails = function(username, password) {
-		$scope.data.username = username;
-		$scope.data.password = password;
-        UserServices.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results) {
+		$scope.loginUser.username = username;
+		$scope.loginUser.password = password;
+        UserServices.callAPI(URL + "accounts/api-token-auth/", $scope.loginUser).then(function(results) {
 
             $scope.loginUser.token = results.data.token;
             
-            store.set('username',  username);
-            store.set('password',  password);
+            store.set('username',  $scope.loginUser.username);
+            store.set('password',  $scope.loginUser.password);
             store.set('authToken', $scope.loginUser.token);
 
         }).catch(function(err) {
-            console.log(err.data);
+            Alerts.loginError(err.data);
         });
     };
 });
