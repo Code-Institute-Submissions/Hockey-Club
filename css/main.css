@@ -19,6 +19,15 @@ button{
     background-color: #808080;
 }
 
+/* My Jumbotron */
+.jumbotron{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+
 /* Teams CSS */
 #team-page-content{
 	margin-top: 5%;
