@@ -22,12 +22,7 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 
         	$scope.loginUser.username = $scope.user.username;
 	        $scope.loginUser.password = $scope.user.password;
-	        console.log("Login User: " + $scope.loginUser.username + 
-	        			"\nLogin Password: "+ $scope.loginUser.password +
-	        			"\nUser Username: " + $scope.user.username + 
-	        			"\nUser Password: " + $scope.user.password);
-	        
-			UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
+	        UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
 				// $scope.data 		= results.data; 
 				
 	            $scope.storeDetails($scope.loginUser.username, $scope.loginUser.password);
