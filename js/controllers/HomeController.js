@@ -23,11 +23,10 @@ app.controller("HomeController", function($scope, $location, store, UserServices
 	        $scope.loginUser.password = $scope.user.password;
 	        
 			UserServices.callAPI(URL + "accounts/register/", $scope.loginUser).then(function(results) { 
-				
-				$scope.showUsername = $scope.user.username;
-
-	            Alerts.loginSuccess();
+			
 	            $scope.storeDetails($scope.loginUser.username, $scope.loginUser.password);
+	            Alerts.loginSuccess();
+				$scope.showUsername = $scope.user.username;
         	})
 			.catch(function(err) {
                 Alerts.loginError(err);
