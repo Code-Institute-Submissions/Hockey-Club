@@ -6,7 +6,7 @@ angular.module("hockey-club", ["ngRoute", "NavDir", "CarouselDir", "HomeControll
 angular.module("hockey-club").config( function($locationProvider, $routeProvider){
 	$locationProvider.html5Mode(true);
 
-	$routeProvider.when('/', {
+	$routeProvider.when('.', {
 		templateUrl: '/Hockey-Club/html/home.html',
 		controller : 'HomeController'
 	})
