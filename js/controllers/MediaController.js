@@ -1,7 +1,6 @@
 var app = angular.module("MediaController", []);
 
 app.controller("MediaController", [ "$scope", function($scope){
-	console.log("MediaController");
 	$scope.images = [
 		{		
 			title	: "Our Coach - Duncan Letterman",

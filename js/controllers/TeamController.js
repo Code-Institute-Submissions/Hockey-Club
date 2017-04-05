@@ -1,7 +1,6 @@
 var app = angular.module("TeamController", []);
 
 app.controller("TeamController", [ "$scope", function($scope){
-	console.log("TeamController");
 
 	$scope.mens_first = {
 		name 	 	: "Mens First", 

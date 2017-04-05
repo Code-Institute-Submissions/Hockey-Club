@@ -2,7 +2,6 @@ var app = angular.module("EnquiryController", []);
 
 app.controller("EnquiryController", function($scope, Alerts){
 
-	console.log("EnquiryController");
 	$scope.todaysDate = new Date();
   	$scope.isOpen 	  = false;
 	
@@ -13,8 +12,9 @@ app.controller("EnquiryController", function($scope, Alerts){
 
 	$scope.submitForm = function(dateOfBirth){
 		var isPristine = $scope.registrationForm.name.$pristine;
+		console.log("Todays Date: " + new Date() + "\nDate Of Birth: " + dateOfBirth);
 
-		if(new Date().getYear() - dateOfBirth.getYear() < 8){
+		if(todaysDate.getYear() - dateOfBirth.getYear() < 8){
 			Alerts.enquiry_error();
 		} else {
 			// Ternary operator. Determines whether or not to show senior or junior sweet alert success
