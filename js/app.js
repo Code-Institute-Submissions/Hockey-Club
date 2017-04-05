@@ -7,7 +7,7 @@ angular.module("hockey-club").config( function($locationProvider, $routeProvider
 	$locationProvider.html5Mode(true);
 
 	$routeProvider.when('/Hockey-Club/', {
-		templateUrl: 'html/home.html',
+		templateUrl: '/Hockey-Club/html/home.html',
 		controller : 'HomeController'
 	})
 	.when('/teams/mens/first', {
