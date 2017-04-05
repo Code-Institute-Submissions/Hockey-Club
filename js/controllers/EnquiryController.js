@@ -15,7 +15,7 @@ app.controller("EnquiryController", function($scope, Alerts){
 		console.log("Todays Date: " + $scope.todaysDate + "\nDate Of Birth: " + dateOfBirth);
 
 		if($scope.todaysDate.getYear() - dateOfBirth.getYear() < 8){
-			Alerts.enquiry_error();
+			Alerts.enquiryError();
 		} else {
 			// Ternary operator. Determines whether or not to show senior or junior sweet alert success
 			$scope.user.membership === "Senior" ? 
