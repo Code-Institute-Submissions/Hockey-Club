@@ -63,3 +63,4 @@ This app uses JSON Web Tokens to authenticate users and keep them logged in. All
 - I have used images I sourced with google searches. 
 - With the paragraphs for each of the teams, I copied some mission statements from random teams across the world. 
 - In this README file, I copied the Contributing & How Does It Work section from the to_do application.
+- I have used the UserService from the To_Do application taught on the AngularJS section of Stream 1. 
